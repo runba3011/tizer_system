@@ -18,3 +18,9 @@
 |picture |active_storage |                                |youtubeのサムネイル（正しく表示されないことがあるため）|
 |user_id |references     |null: false , foreign_key: true |投稿したユーザーのID|
 
+## MovieShowテーブル
+|column|type|options|example|
+|-|-|-|-|
+|movie_id |references |null: false , foreign_key: true |視聴された動画のID|
+|user_id  |references |null: false , foreign_key: true |視聴したユーザーのID|
+|point    |integer    |null: false                     |一回見るたびに溜まるポイント|
