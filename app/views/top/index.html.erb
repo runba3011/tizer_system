@@ -1,3 +1,7 @@
 トップページ
-<%= link_to "ユーザー登録" , new_user_registration_path %>
-<%= link_to "ログイン" , user_session_path %>
+<% if user_signed_in? %>
+  <%= current_user.nickname %>
+<% else %>
+  <%= link_to "ユーザー登録" , new_user_registration_path %>
+  <%= link_to "ログイン" , user_session_path %>
+<% end %>
