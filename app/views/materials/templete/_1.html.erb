@@ -1,1 +1,50 @@
-やぁ
+<%= stylesheet_link_tag "materials/code_box" , media: "all" %>
+<div class= "_code_box_parent">
+  <div class = "_code_box_head">
+    <p class = "_code_box_text">HTML</p>
+  </div>
+  <div class = "_code_box_body">
+    <p class = "_code_box_text">
+      <pre><code>
+        
+&lt%= stylesheet_link_tag "shared/link" , :media =&gt "all" %&gt
+
+  &ltdiv class = "_link_links _link_more_than_800px extend_show_object" style = "opacity:0;"&gt
+    &lt%= link_to link , class: "_link_a" do %&gt
+      &lt% if image != nil %&gt
+        &lt%= image_tag image , alter: "#{image}という画像はありません" , class: "_link_image" %&gt
+      &lt% else %&gt
+        &lt%= image_tag "picture_not_find.png" , class: "_link_image" %&gt
+      &lt% end %&gt
+
+      &ltdiv class = "_link_explain"&gt
+        &ltp class = "_link_title_text"&gt&lt%= title %&gt&lt/p&gt
+        &ltp class = "_link_explain_text"&gt&lt%= explain %&gt&lt/p&gt
+        &ltp class = "_link_link_text common_simple_button"&gt &gt&gtページへ移動する&lt/p&gt
+      &lt/div&gt
+    &lt% end %&gt
+  &lt/div&gt
+
+  &ltdiv class = "_link_links _link_less_than_800px extend_show_object"  style = "opacity:0;"&gt
+    &lt%= link_to link , class: "_link_a" do %&gt
+      &ltdiv class = "_link_image_and_title"&gt
+        &lt% if image != nil %&gt
+          &lt%= image_tag image , alter: "#{image}という画像はありません" , class: "_link_image" %&gt
+        &lt% else %&gt
+          &lt%= image_tag "picture_not_find.png" , class: "_link_image" %&gt
+        &lt% end %&gt
+        &ltp class = "_link_title_text"&gt&lt%= title %&gt&lt/p&gt
+      &lt/div&gt
+
+      &ltdiv class = "_link_explain"&gt
+        &ltp class = "_link_explain_text"&gt&lt%= explain %&gt&lt/p&gt
+        &ltp class = "_link_link_text common_simple_button"&gt &gt&gtページへ移動する&lt/p&gt
+      &lt/div&gt
+    &lt% end %&gt
+  &lt/div&gt
+      </code></pre>
+    </p>
+  </div>
+</div>
+
+<p class = "_code_box_copy_button">コピー</p>

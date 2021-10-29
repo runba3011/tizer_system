@@ -1,0 +1,30 @@
+._code_box_parent{
+  width:80%;
+  border:1px solid black;
+  margin:10px auto;
+}
+
+._code_box_head{
+  width:100%;
+  border-bottom:1px solid black;
+  // text-align: center;
+  padding:5px 0px 5px 10px;
+}
+
+._code_box_body{
+  width:100%;
+}
+
+._code_box_copy_button{
+  width:150px;
+  text-align: center;
+  padding:10px 0;
+  background-color:blue;
+  color:white;
+  margin:auto;
+  border-radius: 5px;
+}
+
+code{
+  white-space: pre-wrap;
+}
