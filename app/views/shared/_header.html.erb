@@ -1,0 +1,8 @@
+<header>
+  <p>Tizer System</p>
+  <% if user_signed_in? %>
+    <p><%= current_user.nickname %></p>
+  <% else %>
+    <%= link_to "アカウント" , root_path %>
+  <% end %>
+</header>
