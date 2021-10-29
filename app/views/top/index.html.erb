@@ -1,8 +1,11 @@
 トップページ
-<% if user_signed_in? %>
-  <%= current_user.nickname %>
-  <%= link_to "ログアウト" , destroy_user_session_path , method: :delete %>
-<% else %>
-  <%= link_to "ユーザー登録" , new_user_registration_path %>
-  <%= link_to "ログイン" , user_session_path %>
-<% end %>
+<div class = "main_content_parent">
+  <div class = "main_side_parent">
+    <div class = "main_content">
+    
+    </div>
+    <div class = "side_bar">
+    
+    </div>
+  </div>
+</div>

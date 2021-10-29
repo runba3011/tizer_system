@@ -12,3 +12,30 @@
  *
  *= require_self
  */
+
+.main_content_parent , .main_side_parent , .main_content , .side_bar{
+  min-height: calc(100vh - 50px);
+}
+
+.main_content_parent{
+  width:100%;
+  background-color:orange;
+}
+
+.main_side_parent{
+  margin:auto;
+  width:90%;
+  display:flex;
+  background-color:blue;
+  justify-content: center;
+}
+
+.main_content{
+  width:60%;
+  background-color:green;
+}
+
+.side_bar{
+  width:38%;
+  background-color:yellow;
+}
