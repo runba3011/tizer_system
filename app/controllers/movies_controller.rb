@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   before_action :movie_setter
   def index
-    
+    @movies = Movie.all
   end
   
   def show
