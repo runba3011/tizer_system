@@ -18,24 +18,48 @@
 }
 
 .main_content_parent{
+  padding-top:80px;
   width:100%;
-  background-color:orange;
+  background:linear-gradient(transparent , rgb(227, 255, 190)) ,  image_url("common/all_background.png");
+  overflow-y: scroll;
 }
 
 .main_side_parent{
   margin:auto;
-  width:90%;
+  width:80%;
   display:flex;
   background-color:blue;
   justify-content: center;
 }
 
 .main_content{
-  width:60%;
+  width:80%;
   background-color:green;
 }
 
 .side_bar{
-  width:38%;
+  width:18%;
   background-color:yellow;
+}
+
+.section_title{
+  width: 80%;
+  margin: auto;
+  font-size: 50px;
+  padding-left:30px;
+}
+
+.section_title::after{
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  --color1: red;
+  --color2: #3a0000;
+  --color3: blue;
+  --color4: rgb(255, 136, 0);
+  background: linear-gradient(to right, var(--color1) 10%, var(--color2) 20%, var(--color2) 45%, var(--color3) 60%, var(--color3) 80%, var(--color4) 90%);
+  border-radius: 10px;
+  margin-left:-30px;
+  margin-bottom:30px;
 }
