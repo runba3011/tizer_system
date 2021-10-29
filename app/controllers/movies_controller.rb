@@ -9,12 +9,26 @@ class MoviesController < ApplicationController
   end
 
   def new
-    
+    @movie.is_confirm = false
   end
 
   def create
     @movie = Movie.new(movie_params)
-    binding.pry
+    if @movie.valid?
+      binding.pry
+      if params[:movie][:is_confirm] == "0"
+        # まだ確認処理が終わっていない時
+        @movie.is_confirm = true
+        render :new
+      else
+        # 確認処理の後の時
+        @movie.save();
+      end
+    else
+      # そもそも@movieが保存できないような値だった時
+      @movie.is_confirm = false;
+      render :new
+    end
   end
 
   def edit
