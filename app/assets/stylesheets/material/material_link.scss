@@ -1,8 +1,25 @@
 ._material_link_parent{
-  height:300px;
   width:95%;
   margin:auto;
   border-radius: 30px;
   border:1px solid rgba(0, 0, 0, 0.185);
   background-color:white;
+  padding:30px;
+}
+
+._material_link_image{
+  width:95%;
+  margin:auto;
+  display: block;
+}
+
+._material_link_button{
+  padding:10px 30px;
+  background:blue;
+  color:white;
+  margin:auto;
+  display:block;
+  width:150px;
+  text-align: center;
+  border-radius: 5px;
 }
