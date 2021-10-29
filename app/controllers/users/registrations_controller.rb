@@ -59,4 +59,22 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(sign_up_params)
+    @user.lank = 1
+    @user.experience_point = 0
+    @user.point = 0
+    binding.pry
+    if !@user.valid?
+      render "devise/registrations/new" and return
+    else
+      @user.save
+      sign_in(:user, @user)
+      redirect_to root_path
+    end
+  end
 end
