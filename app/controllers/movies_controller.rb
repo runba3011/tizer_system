@@ -32,4 +32,8 @@ class MoviesController < ApplicationController
   def movie_setter
     @movie = Movie.new
   end
+
+  def movie_params
+    params.require[:movies].permit(:single_point , :title , :link)
+  end
 end

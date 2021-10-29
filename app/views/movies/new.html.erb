@@ -1,6 +1,7 @@
 動画投稿
 
 <%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
+  <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
   <%= f.label :title ,  "タイトル" %>
   <%= f.text_field :title , autofocus: true %>
 
@@ -9,6 +10,8 @@
 
   <%= f.label :single_point ,  "ポイント" %>
   <%= f.text_field :single_point %>
+
+  <%= f.submit "作成" %>
 
   
 <% end %>
