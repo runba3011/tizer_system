@@ -2,11 +2,11 @@
 
 <header>
   <div class = "header_inside">
-    <p>Tizer System</p>
+    <p class = "header_character">Tizer System</p>
     <% if user_signed_in? %>
-      <p><%= current_user.nickname %></p>
+      <p class = "header_character"><%= current_user.nickname %></p>
     <% else %>
-      <%= link_to "アカウント" , root_path %>
+      <%= link_to "アカウント" , root_path , class: "header_character" %>
     <% end %>
   </div>
 </header>

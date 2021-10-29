@@ -9,4 +9,10 @@ header{
   justify-content: space-between;
   color:white;
   height:100%;
+  align-items: center;
+}
+
+.header_character{
+  display: inline-block;
+  line-height:50px;
 }
