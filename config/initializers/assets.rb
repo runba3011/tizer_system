@@ -19,4 +19,5 @@ Rails.application.config.assets.precompile += %w(
 
   materials/material_link
   materials/show
+  materials/code_box
 )

@@ -6,6 +6,9 @@
   <div class = "main_side_parent">
     <div class = "main_content">
       <%= image_tag @material.image , class: "material_image" %>
+      <% if params[:id] == "1" %>
+        <%= render partial: "code_box" , locals: {title: "html"} %>
+      <% end %>
     </div>
     <div class = "side_bar">
     
