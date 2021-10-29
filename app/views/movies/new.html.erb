@@ -1,17 +1,34 @@
 動画投稿
+<% if @movie.is_confirm == false %>
+  確認前。
+  <%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
+    <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
+    <%= f.label :title ,  "タイトル" %>
+    <%= f.text_field :title , autofocus: true %>
 
-<%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
-  <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
-  <%= f.label :title ,  "タイトル" %>
-  <%= f.text_field :title , autofocus: true %>
+    <%= f.label :link ,  "リンク" %>
+    <%= f.text_field :link %>
 
-  <%= f.label :link ,  "リンク" %>
-  <%= f.text_field :link %>
+    <%= f.label :single_point ,  "ポイント" %>
+    <%= f.number_field :single_point %>
 
-  <%= f.label :single_point ,  "ポイント" %>
-  <%= f.text_field :single_point %>
+    <%= f.check_box :is_confirm  %>
+    <%= f.submit "作成" %>
+  <% end %>
+<% else %>
+  確認をします。
+  <%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
+    <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
+    <%= f.label :title ,  "タイトル" %>
+    <%= f.text_field :title , autofocus: true %>
 
-  <%= f.submit "作成" %>
+    <%= f.label :link ,  "リンク" %>
+    <%= f.text_field :link %>
 
-  
+    <%= f.label :single_point ,  "ポイント" %>
+    <%= f.number_field :single_point %>
+
+    <%= f.check_box :is_confirm  %>
+    <%= f.submit "作成" %>
+  <% end %>
 <% end %>
