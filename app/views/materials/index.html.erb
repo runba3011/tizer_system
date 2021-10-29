@@ -4,7 +4,7 @@
   </div>
   <div class = "main_side_parent">
     <div class = "main_content">
-      <%= render partial: "material_link" %>
+      <%= render partial: "material_link" , collection: Material.all , as: "material" %>
     </div>
     <div class = "side_bar">
     
