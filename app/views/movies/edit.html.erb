@@ -1,1 +1,11 @@
 編集ページ
+
+  <%= form_with model: @movie , url: movie_path , method: :put , local: true do |f| %>
+    <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
+    <%= f.label :title ,  "タイトル" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :single_point ,  "ポイント" %>
+    <%= f.number_field :single_point %>
+    <%= f.submit "完了" %>
+  <% end %>
