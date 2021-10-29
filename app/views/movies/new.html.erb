@@ -1,1 +1,14 @@
 動画投稿
+
+<%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
+  <%= f.label :title ,  "タイトル" %>
+  <%= f.text_field :title , autofocus: true %>
+
+  <%= f.label :link ,  "リンク" %>
+  <%= f.text_field :link %>
+
+  <%= f.label :single_point ,  "ポイント" %>
+  <%= f.text_field :single_point %>
+
+  
+<% end %>

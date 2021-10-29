@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_action :movie_setter
   def index
     
   end
@@ -25,5 +26,10 @@ class MoviesController < ApplicationController
 
   def destroy 
 
+  end
+
+  private
+  def movie_setter
+    @movie = Movie.new
   end
 end
