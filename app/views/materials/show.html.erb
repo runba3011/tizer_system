@@ -7,7 +7,7 @@
     <div class = "main_content">
       <%= image_tag @material.image , class: "material_image" %>
       <% if params[:id] == "1" %>
-        <%= render partial: "code_box" , locals: {title: "html"} %>
+        <%= render partial: "materials/templete/code_box_templete" %>
       <% end %>
     </div>
     <div class = "side_bar">
