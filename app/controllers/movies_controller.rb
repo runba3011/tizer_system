@@ -13,7 +13,8 @@ class MoviesController < ApplicationController
   end
 
   def create
-
+    @movie = Movie.new(movie_params)
+    binding.pry
   end
 
   def edit
@@ -34,6 +35,6 @@ class MoviesController < ApplicationController
   end
 
   def movie_params
-    params.require[:movies].permit(:single_point , :title , :link)
+    params.require(:movie).permit(:single_point , :title , :link).merge(user_id: current_user.id)
   end
 end
