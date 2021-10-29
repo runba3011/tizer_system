@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   before_action :movie_setter
-  before_action :find_movie , only: [:show , :edit , :update]
+  before_action :find_movie , only: [:show , :edit , :update , :destroy]
   def index
     @movies = Movie.all
   end
@@ -42,7 +42,8 @@ class MoviesController < ApplicationController
   end
 
   def destroy 
-
+    binding.pry
+    @movie.destroy
   end
 
   private
