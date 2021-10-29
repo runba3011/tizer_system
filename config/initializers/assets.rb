@@ -17,6 +17,6 @@ Rails.application.config.assets.precompile += %w(
   shared/header
   shared/reset
 
-  material/material_link
-  material/show
+  materials/material_link
+  materials/show
 )
