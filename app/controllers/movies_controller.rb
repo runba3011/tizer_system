@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :movie_setter
+  before_action :find_movie , only: [:show , :edit]
   def index
     @movies = Movie.all
   end
@@ -50,5 +51,9 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).permit(:single_point , :title , :link).merge(user_id: current_user.id)
+  end
+
+  def find_movie
+    @movie = Movie.find(params[:id])
   end
 end
