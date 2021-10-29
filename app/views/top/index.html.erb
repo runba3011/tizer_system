@@ -5,7 +5,14 @@
   </div>
   <div class = "main_side_parent">
     <div class = "main_content">
-    
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト" , destroy_user_session_path , method: :delete %>
+      <% else %>
+        <%= link_to "新規登録" , new_user_registration_path %>
+        <%= link_to "ログイン" , new_user_session_path %>
+      <% end %>
+      <%= link_to "動画一覧へ" , movies_path %>
+      <%= link_to "部分テンプレート販売所へ" , materials_path %>
     </div>
     <div class = "side_bar">
     

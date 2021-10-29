@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
   }
   resources :movies
-  
+  resources :materials , only: [:index , :show]
 end

@@ -16,4 +16,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( 
   shared/header
   shared/reset
+
+  material/material_link
 )
