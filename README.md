@@ -16,6 +16,7 @@
 |-|-|-|-|
 |link    |string         |null: false , unique: true      |youtubeのリンク（保存前に正しく表示されることを確認したい）|
 |picture |active_storage |                                |youtubeのサムネイル（正しく表示されないことがあるため）|
+|point    |integer    |null: false                     |一回見るたびに溜まるポイント|
 |user_id |references     |null: false , foreign_key: true |投稿したユーザーのID|
 
 ## MovieShowテーブル
@@ -23,4 +24,3 @@
 |-|-|-|-|
 |movie_id |references |null: false , foreign_key: true |視聴された動画のID|
 |user_id  |references |null: false , foreign_key: true |視聴したユーザーのID|
-|point    |integer    |null: false                     |一回見るたびに溜まるポイント|

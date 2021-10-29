@@ -1,0 +1,9 @@
+動画視聴ページ
+<%= @movie.title %>
+獲得ポイント：<%= @movie.single_point %>
+投稿者：<%= @movie.user.nickname %>
+<iframe width="950" height="534" src="https://www.youtube.com/embed/<%= @movie.link %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<% if @movie.user == current_user %>
+  <p><%= link_to "編集" , edit_movie_path(@movie) %></p>
+  <p><%= link_to "このサイトから動画を削除する" , movie_path(@movie) , method: :delete %></p>
+<% end %>

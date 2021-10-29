@@ -10,4 +10,5 @@ class User < ApplicationRecord
     validates :lank
     validates :experience_point , numericality: {only_integer: true}
   end
+  has_many :movies
 end

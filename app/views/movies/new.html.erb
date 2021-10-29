@@ -1,0 +1,36 @@
+動画投稿
+<% if @movie.is_confirm == false %>
+  確認前。
+  <%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
+    <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
+    <%= f.label :title ,  "タイトル" %>
+    <%= f.text_field :title , autofocus: true %>
+
+    <%= f.label :link ,  "リンク" %>
+    <%= f.text_field :link %>
+
+    <%= f.label :single_point ,  "ポイント" %>
+    <%= f.number_field :single_point %>
+
+    <%= f.check_box :is_confirm , readonly: "readonly" %>後で見えないようにする
+    <%= f.submit "作成" %>
+  <% end %>
+<% else %>
+  確認をします。きちんと動画が表示されていることを確認してください。
+  <iframe width="950" height="534" src="https://www.youtube.com/embed/<%= @movie.link%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <%= image_tag "https://img.youtube.com/vi/#{@movie.link}/maxresdefault.jpg" , class: "_reccomend_movie_image" %>
+  <%= form_with model: @movie , url: movies_path(@movie) , local: true do |f| %>
+    <%= render partial: "shared/error_messages" , locals: {model: @movie} %>
+    <%= f.label :title ,  "タイトル" %>
+    <%= f.text_field :title , readonly: "readonly" %>
+
+    <%= f.label :link ,  "リンク" , readonly: "readonly" %>
+    <%= f.text_field :link %>
+
+    <%= f.label :single_point ,  "ポイント" , readonly: "readonly" %>
+    <%= f.number_field :single_point %>
+
+    <%= f.check_box :is_confirm , readonly: "readonly" %>後で見えないようにする
+    <%= f.submit "作成" %>
+  <% end %>
+<% end %>
