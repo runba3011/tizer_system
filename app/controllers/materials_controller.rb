@@ -5,5 +5,6 @@ class MaterialsController < ApplicationController
 
   def show
     @material = Material.find(params[:id])
+    @is_single_bar_page = true
   end
 end
