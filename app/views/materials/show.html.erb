@@ -1,17 +1,18 @@
 <%= stylesheet_link_tag "materials/show" , media: "all" %>
 <div class = "main_content_parent">
-  <div class = "top_content">
-    <p class = "section_title"><%= @material.name %></p>
-  </div>
-  <div class = "main_side_parent">
+  <div class = "single_bar_page_column">
+    <div class = "top_margin"></div>
+    <div class = "top_content">
+      <p class = "section_title"><%= @material.name %></p>
+    </div>
+
     <div class = "main_content">
       <%= image_tag @material.image , class: "material_image" %>
       <% if params[:id] == "1" %>
         <%= render partial: "materials/templete/1" %>
       <% end %>
     </div>
-    <div class = "side_bar">
-    
-    </div>
+  </div>
+
   </div>
 </div>
