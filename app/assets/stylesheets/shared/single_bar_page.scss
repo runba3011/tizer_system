@@ -1,0 +1,27 @@
+
+.main_content_parent , .main_content{
+  min-height: calc(100vh - 50px);
+}
+
+.main_content_parent{
+  width:100%;
+  // background:linear-gradient(transparent , rgb(227, 255, 190)) ,  image_url("common/all_background.png");
+  overflow-y: scroll;
+}
+
+.top_margin{
+  padding-top:70px;
+}
+
+.main_content{
+  width:100%;
+  padding-bottom:30px;
+  margin:auto;
+}
+
+.single_bar_page_column{
+  width:80%;
+  margin:auto;
+  background-color: rgba(0, 0, 0, 0.11);
+  max-width: 1000px;
+}
