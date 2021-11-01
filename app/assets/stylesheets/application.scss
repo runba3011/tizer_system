@@ -13,35 +13,6 @@
  *= require_self
  */
 
-.main_content_parent , .main_side_parent , .main_content , .side_bar{
-  min-height: calc(100vh - 50px);
-}
-
-.main_content_parent{
-  padding-top:80px;
-  width:100%;
-  // background:linear-gradient(transparent , rgb(227, 255, 190)) ,  image_url("common/all_background.png");
-  overflow-y: scroll;
-}
-
-.main_side_parent{
-  margin:auto;
-  width:80%;
-  display:flex;
-  background-color:transparent;
-  justify-content: center;
-}
-
-.main_content{
-  width:80%;
-  background-color:rgba(134, 134, 134, 0.3);
-  padding-bottom:30px;
-}
-
-.side_bar{
-  width:18%;
-  background-color:rgba(218, 218, 218, 0.3);
-}
 
 .section_title{
   width: 80%;
