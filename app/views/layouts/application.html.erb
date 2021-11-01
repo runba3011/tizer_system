@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <% if @is_single_bar_page != nil  %>
+      <%= stylesheet_link_tag "shared/side_bar_page" , media: "all" %>
+    <% else %>
+      <%= stylesheet_link_tag "shared/single_bar_page" , medial: "all" %>
+    <% end %>
     <%= stylesheet_link_tag "shared/reset" , media: "all" %>
     <%= render partial: "shared/header" %>
     <%= yield %>
