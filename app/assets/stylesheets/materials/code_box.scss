@@ -23,6 +23,22 @@ pre{
   padding:10px;
 }
 
+._code_box_copy_alert_parent{
+  position: relative;
+}
+
+._code_box_copy_alert{
+  background-color: white;
+  border:1px solid black;
+  color:black;
+  position: absolute;
+  padding:10px;
+  bottom:10px;
+  left:100px;
+  width:150px;
+  border-radius: 10px;;
+}
+
 ._code_box_copy_button{
   width:150px;
   text-align: center;
