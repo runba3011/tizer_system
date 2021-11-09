@@ -10,6 +10,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
+
+.section_title{
+  width: 80%;
+  margin: auto;
+  font-size: 50px;
+  padding-left:30px;
+}
+
+.section_title::after{
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  --color1: red;
+  --color2: #3a0000;
+  --color3: blue;
+  --color4: rgb(255, 136, 0);
+  background: linear-gradient(to right, var(--color1) 10%, var(--color2) 20%, var(--color2) 45%, var(--color3) 60%, var(--color3) 80%, var(--color4) 90%);
+  border-radius: 10px;
+  margin-left:-30px;
+  margin-bottom:30px;
+}

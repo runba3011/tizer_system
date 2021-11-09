@@ -1,0 +1,30 @@
+._material_link_parent{
+  width:95%;
+  margin:auto;
+  border-radius: 30px;
+  border:1px solid rgba(0, 0, 0, 0.185);
+  background-color:white;
+  padding:10px 30px;
+}
+
+._material_link_title{
+  text-align: center;
+  font-size:25px;
+}
+
+._material_link_image{
+  width:100%;
+  display: block;
+  margin:3px auto 10px ;
+}
+
+._material_link_button{
+  padding:10px 30px;
+  background:blue;
+  color:white;
+  margin:auto;
+  display:block;
+  width:150px;
+  text-align: center;
+  border-radius: 5px;
+}

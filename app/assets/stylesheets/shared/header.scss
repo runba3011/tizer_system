@@ -1,0 +1,27 @@
+header{
+  height:50px;
+  width:100%;
+  background:linear-gradient(to right bottom , rgb(0, 0, 202) , rgb(0, 0, 175));
+  position:fixed;
+  top:0px;
+  left:0px;
+}
+
+.header_inside{
+  padding:0px 30px;
+  display:flex;
+  justify-content: space-between;
+  color:white;
+  height:100%;
+  align-items: center;
+}
+
+.header_character{
+  display: inline-block;
+  line-height:50px;
+  font-size:18px;
+}
+
+.header_link{
+  font-size:30px;
+}

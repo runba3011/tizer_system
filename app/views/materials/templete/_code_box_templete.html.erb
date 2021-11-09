@@ -1,0 +1,30 @@
+<%# 
+  ボタンを押した時の検索処理の仕組み
+  ボタンを押す→そのボタンに特定のクラス（検索用）がついているかをapplication.jsで確認
+  →ついていたら、そのクラスと同じIDの入力欄を検索、その中身をクリップボードにコピーする、という仕組み
+%>
+
+<%= stylesheet_link_tag "materials/code_box" , media: "all" %>
+<div class= "_code_box_parent">
+  <div class = "_code_box_head">
+    <p class = "_code_box_text">HTML</p>
+  </div>
+  <div class = "_code_box_body">
+    <%# テキストボックス %>
+    <p class = "_code_box_text">
+      <pre>
+        <%# ↓このオブジェクトのIDを検索ボタンにつけられている検索用クラスと同じにする %>
+        <code id = "copy_object_1">
+          <%# この部分にコードを入れる %>
+        </code>
+      </pre>
+    </p>
+  </div>
+</div>
+
+<%# ↓このオブジェクトのクラスに検索用のクラスを追加する %>
+<div class = "_code_box_copy_button _code_box_copy_alert_parent copy_button copy_object_1" id="copy_button">
+  コピー
+  <%# ↓このIDを、js-copyalert_ + コードが記載してあるcode要素のID と同じにする %>
+  <p id="js-copyalert_copy_object_1" class="copy_alert_ _code_box_copy_alert" style="display:none;">コピー完了！</p>
+</div>
