@@ -10,11 +10,14 @@ require("channels")
 require('jquery')
 
 $(function() {
-  $('#copy_button').on('click', function(){
+  $('.copy_button').on('click', function(){
     //クラスの中にある特定のものをIDから検索するようにする
     let findId = "未定義";
     if($(this).hasClass("copy_object_1")){
       findId = "copy_object_1";
+    }
+    else if($(this).hasClass("copy_object_1_css")){
+      findId = "copy_object_1_css";
     }
     else if($(this).hasClass("copy_object_2")){
       findId = "copy_object_2";
@@ -37,7 +40,7 @@ $(function() {
     // テキストエリアの削除
     $textarea.remove();
     // アラート文の表示
-    $('#js-copyalert').show().delay(2000).fadeOut(400);
+    $(`#js-copyalert_${findId}`).show().delay(2000).fadeOut(400);
   });
 });
 
