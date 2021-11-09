@@ -13,6 +13,7 @@
     <%# テキストボックス %>
     <p class = "_code_box_text">
       <pre>
+        <%# ↓このオブジェクトのIDを検索ボタンにつけられている検索用クラスと同じにする %>
         <code id = "copy_object_1">
           <%# この部分にコードを入れる %>
         </code>
@@ -21,6 +22,9 @@
   </div>
 </div>
 
-<p id="js-copyalert" class="copy_alert" style="display:none;">コピーできました！</p>
-<p class = "_code_box_copy_button copy_button copy_object_1" id="copy_button">コピー</p>
-
+<%# ↓このオブジェクトのクラスに検索用のクラスを追加する %>
+<div class = "_code_box_copy_button _code_box_copy_alert_parent copy_button copy_object_1" id="copy_button">
+  コピー
+  <%# ↓このIDを、js-copyalert_ + コードが記載してあるcode要素のID と同じにする %>
+  <p id="js-copyalert_copy_object_1" class="copy_alert_ _code_box_copy_alert" style="display:none;">コピー完了！</p>
+</div>
