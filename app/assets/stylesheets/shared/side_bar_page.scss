@@ -5,9 +5,10 @@
 
 .main_content_parent{
   padding-top:80px;
-  width:100%;
+  width:80%;
+  margin:auto;
+  background-color:rgb(240, 240, 240);
   // background:linear-gradient(transparent , rgb(227, 255, 190)) ,  image_url("common/all_background.png");
-  overflow-y: scroll;
 }
 
 .main_side_parent{
