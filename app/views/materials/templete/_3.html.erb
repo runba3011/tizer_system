@@ -9,41 +9,7 @@
       <pre>
         <%# ↓このオブジェクトのIDを検索ボタンにつけられている検索用クラスと同じにする %>
         <code id = "copy_object_1">
-&lt%= stylesheet_link_tag "shared/link" , :media =&gt "all" %&gt
-
-&ltdiv class = "_link_links _link_more_than_800px extend_show_object" style = "opacity:0;"&gt
-  &lt%= link_to link , class: "_link_a" do %&gt
-    &lt% if image != nil %&gt
-      &lt%= image_tag image , alter: "#{image}という画像はありません" , class: "_link_image" %&gt
-    &lt% else %&gt
-      &lt%= image_tag "picture_not_find.png" , class: "_link_image" %&gt
-    &lt% end %&gt
-
-    &ltdiv class = "_link_explain"&gt
-      &ltp class = "_link_title_text"&gt&lt%= title %&gt&lt/p&gt
-      &ltp class = "_link_explain_text"&gt&lt%= explain %&gt&lt/p&gt
-      &ltp class = "_link_link_text common_simple_button"&gt &gt&gtページへ移動する&lt/p&gt
-    &lt/div&gt
-  &lt% end %&gt
-&lt/div&gt
-
-&ltdiv class = "_link_links _link_less_than_800px extend_show_object"  style = "opacity:0;"&gt
-  &lt%= link_to link , class: "_link_a" do %&gt
-    &ltdiv class = "_link_image_and_title"&gt
-      &lt% if image != nil %&gt
-        &lt%= image_tag image , alter: "#{image}という画像はありません" , class: "_link_image" %&gt
-      &lt% else %&gt
-        &lt%= image_tag "picture_not_find.png" , class: "_link_image" %&gt
-      &lt% end %&gt
-      &ltp class = "_link_title_text"&gt&lt%= title %&gt&lt/p&gt
-    &lt/div&gt
-
-    &ltdiv class = "_link_explain"&gt
-      &ltp class = "_link_explain_text"&gt&lt%= explain %&gt&lt/p&gt
-      &ltp class = "_link_link_text common_simple_button"&gt &gt&gtページへ移動する&lt/p&gt
-    &lt/div&gt
-  &lt% end %&gt
-&lt/div&gt
+&ltp class = "open_sort_button"&gt並び替えを使用する&lt/p&gt
         </code>
       </pre>
     </p>
@@ -69,41 +35,14 @@
       <pre>
         <%# ↓このオブジェクトのIDを検索ボタンにつけられている検索用クラスと同じにする %>
         <code id = "copy_object_1">
-&lt%= stylesheet_link_tag "shared/link" , :media =&gt "all" %&gt
-
-&ltdiv class = "_link_links _link_more_than_800px extend_show_object" style = "opacity:0;"&gt
-  &lt%= link_to link , class: "_link_a" do %&gt
-    &lt% if image != nil %&gt
-      &lt%= image_tag image , alter: "#{image}という画像はありません" , class: "_link_image" %&gt
-    &lt% else %&gt
-      &lt%= image_tag "picture_not_find.png" , class: "_link_image" %&gt
-    &lt% end %&gt
-
-    &ltdiv class = "_link_explain"&gt
-      &ltp class = "_link_title_text"&gt&lt%= title %&gt&lt/p&gt
-      &ltp class = "_link_explain_text"&gt&lt%= explain %&gt&lt/p&gt
-      &ltp class = "_link_link_text common_simple_button"&gt &gt&gtページへ移動する&lt/p&gt
-    &lt/div&gt
-  &lt% end %&gt
-&lt/div&gt
-
-&ltdiv class = "_link_links _link_less_than_800px extend_show_object"  style = "opacity:0;"&gt
-  &lt%= link_to link , class: "_link_a" do %&gt
-    &ltdiv class = "_link_image_and_title"&gt
-      &lt% if image != nil %&gt
-        &lt%= image_tag image , alter: "#{image}という画像はありません" , class: "_link_image" %&gt
-      &lt% else %&gt
-        &lt%= image_tag "picture_not_find.png" , class: "_link_image" %&gt
-      &lt% end %&gt
-      &ltp class = "_link_title_text"&gt&lt%= title %&gt&lt/p&gt
-    &lt/div&gt
-
-    &ltdiv class = "_link_explain"&gt
-      &ltp class = "_link_explain_text"&gt&lt%= explain %&gt&lt/p&gt
-      &ltp class = "_link_link_text common_simple_button"&gt &gt&gtページへ移動する&lt/p&gt
-    &lt/div&gt
-  &lt% end %&gt
-&lt/div&gt
+.open_sort_button {
+  display: block;
+  text-align: center;
+  background: linear-gradient(to right bottom , #1919ff , #000089);
+  width: 300px;
+  line-height: 40px;
+  border-radius: 10px;
+}
         </code>
       </pre>
     </p>
